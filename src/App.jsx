@@ -1,15 +1,19 @@
 import React from "react";
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
 import Nav from "./components/Nav";
 import Mainpage from "./page/Mainpage";
-import Footer from "./components/Footer";
-import "./App.css";
+import PracticalInfo from "./page/PracticalInfo";
+import PracticalJob from "./page/PracticalJob";
 
 function App() {
   return (
     <div>
-      <Nav />
-      <Mainpage />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Mainpage />} />
+        <Route path="/PracticalInfo" element={<PracticalInfo />} />
+        <Route path="/PracticalJob" element={<PracticalJob />} />
+      </Routes>
     </div>
   );
 }
