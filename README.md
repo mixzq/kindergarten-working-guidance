@@ -1,7 +1,7 @@
 # Arbeidsbok
-a app for a small comany 
+An app for a small comany 
 
-use vite.js + styled component
+Use vite.js + styled component
 
-this app is a work guidance appfor new staff who working at a kindergarten(styled only for mobile phone ) 
+This app is a work guidance map for new staff who working at a kindergarten(styled only for mobile phone ) 
 
