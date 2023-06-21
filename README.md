@@ -1,4 +1,4 @@
-# Arbeidsbok
+# Arbeidsbok （unfinished）
 An app for a small comany 
 
 Use vite.js + styled component
