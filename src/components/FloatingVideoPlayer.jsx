@@ -9,7 +9,50 @@ const FloatingVideoPlayer = ({ videoUrl }) => {
     setShowPlayer(!showPlayer);
     setShowOverlay(!showOverlay);
   };
+  //style
+  const videoButton = {
+    padding: "1vw 3vw",
+    fontSize: "4vw",
+    fontWeight: "600",
+    letterSpacing: "0.3vw",
+    backgroundColor: "#000000",
+    color: "white",
+    border: "none",
+    borderRadius: "12px",
+    marginBottom: "0px",
+    cursor: "pointer",
+  };
 
+  const closeButton = {
+    padding: "vw",
+    fontSize: "5vw",
+    fontWeight: "bold",
+    backgroundColor: "#000000",
+    color: "white",
+    border: "none",
+
+    boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.25)",
+    position: "absolute",
+    top: "10px",
+    right: "10px",
+    cursor: "pointer",
+  };
+
+  const playerStyle = {
+    position: "fixed",
+    top: "50%",
+    left: "50%",
+    // make the frame center:
+    transform: "translate(-50%, -50%)",
+    //
+    backgroundColor: "#000000",
+    padding: "5vw 0vw",
+    borderRadius: "5px",
+
+    boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.25)",
+    zIndex: "100",
+  };
+  //--------------------------------------------
   return (
     <div className="floating-video-player">
       {showOverlay && (
@@ -19,56 +62,18 @@ const FloatingVideoPlayer = ({ videoUrl }) => {
       )}
 
       <button
+        className="videoButton"
         onClick={togglePlayer}
-        style={{
-          padding: "1vw 3vw",
-          fontSize: "4vw",
-          fontWeight: "600",
-          letterSpacing: "0.3vw",
-          backgroundColor: "#000000",
-          color: "white",
-          border: "none",
-          borderRadius: "12px",
-          marginBottom: "0px",
-          cursor: "pointer",
-        }}
+        style={videoButton}
       >
         VIDEO
       </button>
       {showPlayer && (
-        <div
-          className="floating-player"
-          style={{
-            position: "fixed",
-            top: "50%",
-            left: "50%",
-            // make the frame center:
-            transform: "translate(-50%, -50%)",
-            //
-            backgroundColor: "#000000",
-            padding: "5vw 0vw",
-            borderRadius: "5px",
-
-            boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.25)",
-            zIndex: "100",
-          }}
-        >
+        <div className="floating-player" style={playerStyle}>
           <button
+            className="closeButton"
             onClick={togglePlayer}
-            style={{
-              padding: "vw",
-              fontSize: "5vw",
-              fontWeight: "bold",
-              backgroundColor: "#000000",
-              color: "white",
-              border: "none",
-
-              boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.25)",
-              position: "absolute",
-              top: "10px",
-              right: "10px",
-              cursor: "pointer",
-            }}
+            style={closeButton}
           >
             X
           </button>

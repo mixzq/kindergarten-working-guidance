@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Pagehead from "../components/Pagehead";
 import PDFButton from "../components/PDFButton";
+import FloatingVideoPlayer from "../components/FloatingVideoPlayer";
 
 function PracticalInfo() {
   return (
@@ -12,6 +13,13 @@ function PracticalInfo() {
         </div>
 
         <div className="content-section">
+          <div className="info A">
+            <h2>Gjør dette før du starter dagen</h2>
+            <p>Sjekk rutinevideoen</p>
+            <FloatingVideoPlayer videoUrl="/dagligRutine.mp4" />
+            <p>Bilder of krysselisten og ukeplanboka</p>
+            <PDFButton pdfUrl="/krysselisten.pdf" />
+          </div>
           <div className="info A">
             <h2>How to use Kidplane</h2>
             <p>
@@ -48,8 +56,8 @@ const PracticalInfoStyle = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 70vw;
-        height: 6vh;
+        width: 90vw;
+        height: auto;
         background-color: #c0e0de;
         h2 {
           letter-spacing: 0.2vw;
@@ -64,7 +72,6 @@ const PracticalInfoStyle = styled.div`
       display: flex;
       flex-direction: column;
       align-items: start;
-      height: 22vh;
       padding-left: 4vw;
       padding-top: 2vh;
       gap: 1vh;
