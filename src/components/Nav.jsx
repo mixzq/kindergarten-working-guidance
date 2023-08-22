@@ -9,17 +9,17 @@ function Nav() {
         <ul className="menuBody">
           <li className="nav-item">
             <a className="nav-link" href="#">
-              Home
+              NYHETER
             </a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#">
-              Doc
+              DOC
             </a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#">
-              Others
+              VIDEOS
             </a>
           </li>
         </ul>
@@ -30,6 +30,35 @@ function Nav() {
 
 export default Nav;
 const NavStyle = styled.div`
+  .navBar {
+    padding-top: 5vh;
+    width: 100%;
+    display: flex;
+  }
+
+  .menuBody {
+    width: 100%;
+    gap: 5vw;
+    padding: 0vw 4vw;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    .nav-item {
+      width: auto;
+      border: 0.2vw solid #1a1a1a;
+      border-radius: 4px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .nav-link {
+      font-size: 1vw;
+      color: #333333;
+      text-decoration: none;
+      margin: 0.5vw 2vw;
+      font-weight: 600;
+    }
+  }
   //mobile
   @media screen and (max-width: 1198px) {
     * {
@@ -49,7 +78,7 @@ const NavStyle = styled.div`
       align-items: center;
       list-style: none;
       .nav-item {
-        width: 18vw;
+        width: auto;
         border: 0.7vw solid #1a1a1a;
         border-radius: 4px;
         display: flex;
@@ -61,6 +90,7 @@ const NavStyle = styled.div`
         text-decoration: none;
         margin: 1vw 2vw;
         font-weight: 600;
+        font-size: 4vw;
       }
     }
   }
